@@ -1,0 +1,30 @@
+【podの初期設定】
+用途 ＞ 環境新規構築など
+# podをインストールする。
+sudo gem install cocoapods
+# プロジェクトフォルダに移動する。
+cd /XXX/ios_mockup
+# podの初期設定をする。
+pod setup
+
+【pod環境の構築方法】
+用途 ＞ 新規プロジェクトなど
+# プロジェクトフォルダに移動する。
+cd /XXX/ios_mockup
+# プロジェクトにpod構成を適用する。
+pod init
+# podの構築設定にライブライを追加する。
+vi Podfile
+  # Pods for ios_mockup
+  # ここに使用するライブラリを記載する。
+  pod 'Moya/RxSwift', '~> 11.0'
+
+【podライブラリのインストール方法】
+用途 ＞ プロジェクト参加など
+# プロジェクトフォルダに移動する。
+cd /XXX/ios_mockup
+# podのライブラリをインストールする。
+pod install
+# 以降プロジェクトを開く場合は「ios_mockup.xcworkspace」から開く。
+
+

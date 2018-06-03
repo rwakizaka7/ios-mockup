@@ -1,0 +1,6 @@
+framework module Pods_ios_mockupUITests {
+  umbrella header "Pods-ios-mockupUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
