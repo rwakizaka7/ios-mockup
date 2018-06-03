@@ -3,7 +3,7 @@
 //  ios_mockup
 //
 //  Created by y.okoshi on 2018/05/27.
-//  Copyright © 2018年 脇坂亮太. All rights reserved.
+//  Copyright © 2018年 アルサーガパートナーズ株式会社. All rights reserved.
 //
 
 import Moya

@@ -3,13 +3,13 @@
 //  ios_mockup
 //
 //  Created by y.okoshi on 2018/05/26.
-//  Copyright © 2018年 脇坂亮太. All rights reserved.
+//  Copyright © 2018年 アルサーガパートナーズ株式会社. All rights reserved.
 //
 
 import UIKit
 
 /// テーブルビュー
-class Moya_ApiResultUITableView: UITableView, UITableViewDelegate, UITableViewDataSource {
+class Moya_UITableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     /// テーブルビューの表示データ
     var dataList: [String] = []
     
@@ -35,6 +35,7 @@ class Moya_ApiResultUITableView: UITableView, UITableViewDelegate, UITableViewDa
         
         // セルのテキストを編集する。
         cell.textLabel?.text = dataList[indexPath.row]
+        
         return cell
     }
     

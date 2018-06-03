@@ -4,7 +4,7 @@
 //  ios_mockup
 //
 //  Created by y.okoshi on 2018/05/26.
-//  Copyright © 2018年 脇坂亮太. All rights reserved.
+//  Copyright © 2018年 アルサーガパートナーズ株式会社. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ import RxSwift
 /// ビューコントローラー
 class Moya_ViewController: UIViewController {
     /// API結果取得テーブル
-    @IBOutlet weak var apiResultUITableview: Moya_ApiResultUITableView!
+    @IBOutlet weak var tableview: Moya_UITableView!
     
     /// GithubのURL取得ボタン
     @IBOutlet weak var getGithubURLUIButton: UIButton!
@@ -27,8 +27,8 @@ class Moya_ViewController: UIViewController {
         super.viewDidLoad()
         
         //テーブルビューのデリゲード
-        apiResultUITableview.delegate = apiResultUITableview
-        apiResultUITableview.dataSource = apiResultUITableview
+        tableview.delegate = tableview
+        tableview.dataSource = tableview
     }
     
     /// テーブルビューのデータを取得する。
@@ -46,7 +46,7 @@ class Moya_ViewController: UIViewController {
             // ⑥ テーブルビューにプロファイルの一部を表示する。
             // URLを登録する。
             if profile?.url != nil {
-                self.apiResultUITableview.addRow(text: "\(userName)＞\(profile!.url!)")
+                self.tableview.addRow(text: "\(userName)＞\(profile!.url!)")
             }
             // コールバッククロージャ中身終了
         })

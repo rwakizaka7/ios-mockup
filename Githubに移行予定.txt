@@ -27,4 +27,9 @@ cd /XXX/ios_mockup
 pod install
 # 以降プロジェクトを開く場合は「ios_mockup.xcworkspace」から開く。
 
+【plistの追加項目】
+・API通信時にhttpにアクセスできるようにする。
+Information Property List
+ App Transport Security Settings
+  Allow Arbitrary Loads > YES
 

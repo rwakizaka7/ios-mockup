@@ -15,14 +15,14 @@
 		3476031820C3A0C800DC12FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3476031620C3A0C800DC12FD /* LaunchScreen.storyboard */; };
 		3476032320C3A0C800DC12FD /* ios_mockupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476032220C3A0C800DC12FD /* ios_mockupTests.swift */; };
 		3476032E20C3A0C800DC12FD /* ios_mockupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476032D20C3A0C800DC12FD /* ios_mockupUITests.swift */; };
-		3476034620C3A35500DC12FD /* BasicApi_UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476033C20C3A35500DC12FD /* BasicApi_UITableView.swift */; };
-		3476034720C3A35500DC12FD /* BasicApiAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476033D20C3A35500DC12FD /* BasicApiAccess.swift */; };
-		3476034820C3A35500DC12FD /* BasicApi_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476033E20C3A35500DC12FD /* BasicApi_ViewController.swift */; };
+		3476034620C3A35500DC12FD /* URLSession_UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476033C20C3A35500DC12FD /* URLSession_UITableView.swift */; };
+		3476034720C3A35500DC12FD /* URLSession_QiitaAPIAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476033D20C3A35500DC12FD /* URLSession_QiitaAPIAccess.swift */; };
+		3476034820C3A35500DC12FD /* URLSession_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476033E20C3A35500DC12FD /* URLSession_ViewController.swift */; };
 		3476034920C3A35500DC12FD /* Moya.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3476033F20C3A35500DC12FD /* Moya.storyboard */; };
 		3476034A20C3A35500DC12FD /* Moya_GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476034120C3A35500DC12FD /* Moya_GithubAPI.swift */; };
 		3476034B20C3A35500DC12FD /* Moya_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476034220C3A35500DC12FD /* Moya_ViewController.swift */; };
 		3476034C20C3A35500DC12FD /* Moya_GIthubAPIAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476034320C3A35500DC12FD /* Moya_GIthubAPIAccess.swift */; };
-		3476034D20C3A35500DC12FD /* Moya_ApiResultUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476034420C3A35500DC12FD /* Moya_ApiResultUITableView.swift */; };
+		3476034D20C3A35500DC12FD /* Moya_UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476034420C3A35500DC12FD /* Moya_UITableView.swift */; };
 		3476034E20C3A35500DC12FD /* BasicApi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3476034520C3A35500DC12FD /* BasicApi.storyboard */; };
 		F38C1E4F3BC332146F269600 /* Pods_ios_mockup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F126CDEE51B7433DD251D /* Pods_ios_mockup.framework */; };
 		F99B7390E51DD6D51B80C98E /* Pods_ios_mockupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1A1BF098F81FFE885829BB /* Pods_ios_mockupTests.framework */; };
@@ -61,14 +61,14 @@
 		3476032920C3A0C800DC12FD /* ios-mockupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-mockupUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3476032D20C3A0C800DC12FD /* ios_mockupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_mockupUITests.swift; sourceTree = "<group>"; };
 		3476032F20C3A0C800DC12FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3476033C20C3A35500DC12FD /* BasicApi_UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicApi_UITableView.swift; sourceTree = "<group>"; };
-		3476033D20C3A35500DC12FD /* BasicApiAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicApiAccess.swift; sourceTree = "<group>"; };
-		3476033E20C3A35500DC12FD /* BasicApi_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicApi_ViewController.swift; sourceTree = "<group>"; };
+		3476033C20C3A35500DC12FD /* URLSession_UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession_UITableView.swift; sourceTree = "<group>"; };
+		3476033D20C3A35500DC12FD /* URLSession_QiitaAPIAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession_QiitaAPIAccess.swift; sourceTree = "<group>"; };
+		3476033E20C3A35500DC12FD /* URLSession_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession_ViewController.swift; sourceTree = "<group>"; };
 		3476033F20C3A35500DC12FD /* Moya.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Moya.storyboard; sourceTree = "<group>"; };
 		3476034120C3A35500DC12FD /* Moya_GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moya_GithubAPI.swift; sourceTree = "<group>"; };
 		3476034220C3A35500DC12FD /* Moya_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moya_ViewController.swift; sourceTree = "<group>"; };
 		3476034320C3A35500DC12FD /* Moya_GIthubAPIAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moya_GIthubAPIAccess.swift; sourceTree = "<group>"; };
-		3476034420C3A35500DC12FD /* Moya_ApiResultUITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moya_ApiResultUITableView.swift; sourceTree = "<group>"; };
+		3476034420C3A35500DC12FD /* Moya_UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moya_UITableView.swift; sourceTree = "<group>"; };
 		3476034520C3A35500DC12FD /* BasicApi.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BasicApi.storyboard; sourceTree = "<group>"; };
 		4DAC001D47882785F47B2B88 /* Pods-ios-mockupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mockupUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-mockupUITests/Pods-ios-mockupUITests.release.xcconfig"; sourceTree = "<group>"; };
 		576F126CDEE51B7433DD251D /* Pods_ios_mockup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_mockup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,9 +180,9 @@
 		3476033B20C3A35500DC12FD /* BasicApi */ = {
 			isa = PBXGroup;
 			children = (
-				3476033C20C3A35500DC12FD /* BasicApi_UITableView.swift */,
-				3476033D20C3A35500DC12FD /* BasicApiAccess.swift */,
-				3476033E20C3A35500DC12FD /* BasicApi_ViewController.swift */,
+				3476033C20C3A35500DC12FD /* URLSession_UITableView.swift */,
+				3476033D20C3A35500DC12FD /* URLSession_QiitaAPIAccess.swift */,
+				3476033E20C3A35500DC12FD /* URLSession_ViewController.swift */,
 			);
 			path = BasicApi;
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 				3476034120C3A35500DC12FD /* Moya_GithubAPI.swift */,
 				3476034220C3A35500DC12FD /* Moya_ViewController.swift */,
 				3476034320C3A35500DC12FD /* Moya_GIthubAPIAccess.swift */,
-				3476034420C3A35500DC12FD /* Moya_ApiResultUITableView.swift */,
+				3476034420C3A35500DC12FD /* Moya_UITableView.swift */,
 			);
 			path = Moya;
 			sourceTree = "<group>";
@@ -429,12 +429,12 @@
 				3476034B20C3A35500DC12FD /* Moya_ViewController.swift in Sources */,
 				3476034C20C3A35500DC12FD /* Moya_GIthubAPIAccess.swift in Sources */,
 				3476031020C3A0C600DC12FD /* ViewController.swift in Sources */,
-				3476034720C3A35500DC12FD /* BasicApiAccess.swift in Sources */,
-				3476034620C3A35500DC12FD /* BasicApi_UITableView.swift in Sources */,
+				3476034720C3A35500DC12FD /* URLSession_QiitaAPIAccess.swift in Sources */,
+				3476034620C3A35500DC12FD /* URLSession_UITableView.swift in Sources */,
 				3476034A20C3A35500DC12FD /* Moya_GithubAPI.swift in Sources */,
 				3476030E20C3A0C600DC12FD /* AppDelegate.swift in Sources */,
-				3476034820C3A35500DC12FD /* BasicApi_ViewController.swift in Sources */,
-				3476034D20C3A35500DC12FD /* Moya_ApiResultUITableView.swift in Sources */,
+				3476034820C3A35500DC12FD /* URLSession_ViewController.swift in Sources */,
+				3476034D20C3A35500DC12FD /* Moya_UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

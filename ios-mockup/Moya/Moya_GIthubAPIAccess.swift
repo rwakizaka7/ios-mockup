@@ -3,7 +3,7 @@
 //  ios_mockup
 //
 //  Created by y.okoshi on 2018/05/27.
-//  Copyright © 2018年 脇坂亮太. All rights reserved.
+//  Copyright © 2018年 アルサーガパートナーズ株式会社. All rights reserved.
 //
 
 import Moya
@@ -30,7 +30,7 @@ class Moya_GithubAPIAccess {
     ///
     /// - Parameters:
     ///   - userName: Githubのユーザー名
-    ///   - callback: プロファイル取得時の処理
+    ///   - callback: プロファイル取得時の処理。
     func getGithubProfile(userName: String, callback: @escaping (GithubProfile?) -> ()) {
         
         // ① 引数にユーザー名とコールバッククロージャー（引数プロファイル）を指定して呼ぶ。
@@ -49,8 +49,9 @@ class Moya_GithubAPIAccess {
                     String.Encoding.utf8.rawValue)! as String
                 print("受信データ->\(jsonStr)")
                 
-                // json文字列をプロファイル構造体に格納する。
+                // JSON文字列をプロファイル構造体に格納する。
                 do {
+                    // JSONデータをデコードする。
                     profile = try JSONDecoder().decode(
                         GithubProfile.self, from: moyaResponse.data)
                 }
