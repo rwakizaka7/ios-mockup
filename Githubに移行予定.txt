@@ -39,9 +39,8 @@ Information Property List
 ＞Main Interfaceの指定を呼び出すストーリボードにする。
 ・SwiftプロジェクトでObjective-Cを呼べるようにする。
 ①Bridgingヘッダーを作成する。
-②Bridgingヘッダーに使用するソースのヘッターにインポートを追記する。
-#import ""
-③プリッチングヘッダーパスの指定
+ios-mockup-Bridging-Header.h
+②Bridgingヘッダーのパスの指定
 プロジェクトファイル＞TARGETS＞ios-mockup＞Build Settings
 ＞Objective-C Bridging HeaderのパスにBridgingヘッターの、
 パスを合わせる。
