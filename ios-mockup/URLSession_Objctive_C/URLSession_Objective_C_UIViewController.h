@@ -12,6 +12,6 @@
  インターフェースの宣言
  外部アクセス可能なメンバ変数やメソッドを宣言する。
  */
-@interface URLSession_Objective_C_ViewController: UIViewController
+@interface URLSession_Objective_C_UIViewController: UIViewController
 
 @end

@@ -9,7 +9,7 @@
 import UIKit
 
 /// ビューコントローラー
-class URLSession_ViewController: UIViewController {
+class URLSession_UIViewController: UIViewController {
     /// API取得結果表示テーブル
     @IBOutlet weak var tableView: URLSession_UITableView!
     

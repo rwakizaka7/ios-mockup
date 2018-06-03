@@ -12,7 +12,7 @@ import Moya
 import RxSwift
 
 /// ビューコントローラー
-class Moya_ViewController: UIViewController {
+class Moya_UIViewController: UIViewController {
     /// API結果取得テーブル
     @IBOutlet weak var tableview: Moya_UITableView!
     
