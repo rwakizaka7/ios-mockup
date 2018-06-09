@@ -10,7 +10,6 @@
 		153F32DA1805CC8D06B4DE34 /* Pods_ios_mockupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6798C923D698FCF61AB8A224 /* Pods_ios_mockupUITests.framework */; };
 		1B83009020C3E1C000B9F5BB /* URLSession_Objective_C_UITableVew.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B83008F20C3E1C000B9F5BB /* URLSession_Objective_C_UITableVew.m */; };
 		1B83009420C3E9CC00B9F5BB /* URLSession_Objective_C_QiitaAPIAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B83009320C3E9CC00B9F5BB /* URLSession_Objective_C_QiitaAPIAccess.m */; };
-		1BF5259D20CBA7DA00B6BCD7 /* URLSession_Objective_C_Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF5259C20CBA7DA00B6BCD7 /* URLSession_Objective_C_Article.m */; };
 		3476030E20C3A0C600DC12FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476030D20C3A0C600DC12FD /* AppDelegate.swift */; };
 		3476031020C3A0C600DC12FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476030F20C3A0C600DC12FD /* ViewController.swift */; };
 		3476031320C3A0C600DC12FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3476031120C3A0C600DC12FD /* Main.storyboard */; };
@@ -57,8 +56,6 @@
 		1B83009120C3E2A100B9F5BB /* URLSession_Objective_C_UITableVew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLSession_Objective_C_UITableVew.h; sourceTree = "<group>"; };
 		1B83009220C3E9B700B9F5BB /* URLSession_Objective_C_QiitaAPIAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLSession_Objective_C_QiitaAPIAccess.h; sourceTree = "<group>"; };
 		1B83009320C3E9CC00B9F5BB /* URLSession_Objective_C_QiitaAPIAccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLSession_Objective_C_QiitaAPIAccess.m; sourceTree = "<group>"; };
-		1BF5259B20CBA7DA00B6BCD7 /* URLSession_Objective_C_Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSession_Objective_C_Article.h; sourceTree = "<group>"; };
-		1BF5259C20CBA7DA00B6BCD7 /* URLSession_Objective_C_Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSession_Objective_C_Article.m; sourceTree = "<group>"; };
 		3476030A20C3A0C600DC12FD /* ios-mockup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-mockup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3476030D20C3A0C600DC12FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3476030F20C3A0C600DC12FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,8 +122,6 @@
 		1B83005020C3C5DC00B9F5BB /* URLSession_Objctive_C */ = {
 			isa = PBXGroup;
 			children = (
-				1BF5259B20CBA7DA00B6BCD7 /* URLSession_Objective_C_Article.h */,
-				1BF5259C20CBA7DA00B6BCD7 /* URLSession_Objective_C_Article.m */,
 				3476035220C3D1A400DC12FD /* URLSession_Objective_C_UIViewController.h */,
 				3476035020C3CCF000DC12FD /* URLSession_Objective_C_UIViewController.m */,
 				1B83009120C3E2A100B9F5BB /* URLSession_Objective_C_UITableVew.h */,
@@ -462,7 +457,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B83009020C3E1C000B9F5BB /* URLSession_Objective_C_UITableVew.m in Sources */,
-				1BF5259D20CBA7DA00B6BCD7 /* URLSession_Objective_C_Article.m in Sources */,
 				3476034B20C3A35500DC12FD /* Moya_UIViewController.swift in Sources */,
 				3476034C20C3A35500DC12FD /* Moya_GIthubAPIAccess.swift in Sources */,
 				3476031020C3A0C600DC12FD /* ViewController.swift in Sources */,

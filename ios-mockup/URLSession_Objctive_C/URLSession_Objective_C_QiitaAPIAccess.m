@@ -7,9 +7,8 @@
 //
 
 #import "URLSession_Objective_C_QiitaAPIAccess.h"
-#import "URLSession_Objective_C_Article.h"
 #import <Foundation/Foundation.h>
-#import <Foundation/Foundation.h>
+
 
 
 /**
@@ -22,7 +21,6 @@
 
 
 
-
 @implementation URLSession_Objective_C_QiitaAPIAccess
 NSString *html;
 NSString *title;
@@ -30,30 +28,35 @@ NSString *user;
 
 
 
-- (void)urlAccess {
+/*
+ 
+completionHandler:(void (^)(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error))completionHandler
+ 
+ 
+ - (NSURLSessionUploadTask *)uploadTaskWithRequest:(NSURLRequest *)request fromFile:(NSURL *)fileURL completionHandler:(void (^)(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error))completionHandler;
+ 
+ - (void)getArticle:(void (^)(NSArray<NSDictionary*> *articleList))completion {
+ 
+ */
+
+ - (void)getArticle:(void (^)(NSArray<NSDictionary*> *articleList))completion {
     // URLコンポーネント
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:@"https://qiita.com/api/v2/items"];
-    urlComponents.queryItems = @[[NSURLQueryItem queryItemWithName:@"per_page" value:@"5"]];
+    urlComponents.queryItems = @[[NSURLQueryItem queryItemWithName:@"per_page" value:@"50"]];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:urlComponents.URL];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:
                                   ^(NSData *data, NSURLResponse *response, NSError *error) {
                                      html = [[NSString alloc] initWithBytes:data.bytes length:data.length encoding:NSUTF8StringEncoding];
-                                      
-                                     // NSLog(@"html = %@",html);
+        
+                                      // JSON型を辞書型の配列に変換する。
                                       NSData *jsonData = [html dataUsingEncoding:NSUnicodeStringEncoding];
-                                      self.array = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
+                                      self.articleList = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
                                       
-                                      NSMutableArray *results = [[NSMutableArray alloc] init];
-                                      for (NSDictionary *obj in self.array)
-                                      {
-                                          Article *article = [[Article alloc] init];
-                                          article.title = [obj objectForKey:@"title"];
-                                          //article.user = [obj objectForKey:@"user"];
-                                          [results addObject:article];
-                                      }
-                                     
+                                      completion(self.articleList);
+                                    
+                                      
                                   }];
     
     [task resume];

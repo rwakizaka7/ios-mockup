@@ -37,13 +37,39 @@
     self.tableView.dataSource = self.tableView;
     self.tableView.delegate = self.tableView;
     
-    // 〜〜リストをテーブルビューに設定する。
-    self.tableView.articleList = @[@"nepi",@"nepia",@"wwf",@"mintia",@"iPhone",@"note"];
+   
+    // ブロック型変数の定義
+    void (^completion)(NSArray<NSDictionary*> *articleList);
+    // ブロック型変数に処理の入れ方（リテラル）
+    completion = ^(NSArray<NSDictionary*> *articleList) { /* 本体 */ };
     
     //URLアクセスクラスのインスタンスを生成、allocはメモリの確保、initは初期化の意味
     URLSession_Objective_C_QiitaAPIAccess *urlSession_Objective_C_QiitaAPIAccess = [[URLSession_Objective_C_QiitaAPIAccess alloc] init];
-    [urlSession_Objective_C_QiitaAPIAccess urlAccess];
+    [urlSession_Objective_C_QiitaAPIAccess getArticle:^(NSArray<NSDictionary *> *articleList) {
+
+        
+        self.tableView.articleList = articleList;
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self.tableView reloadData];
+        });
+    }];
+    
+//    //URLアクセスクラスのインスタンスを生成、allocはメモリの確保、initは初期化の意味
+//    URLSession_Objective_C_QiitaAPIAccess *urlSession_Objective_C_QiitaAPIAccess = [[URLSession_Objective_C_QiitaAPIAccess alloc] init];
+//    [urlSession_Objective_C_QiitaAPIAccess getArticle:^(NSArray<NSDictionary *> *articleList) {
+//
+//    }
+    
+     
+    
+   // [self performSelector:@selector(tableviewreload) withObject:nil afterDelay:5.0];
 }
 
+//- (void)tableviewreload {
+//    [self.tableView reloadData];
+//}
 
 @end

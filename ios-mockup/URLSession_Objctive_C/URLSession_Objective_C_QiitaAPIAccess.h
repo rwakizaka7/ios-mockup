@@ -13,8 +13,9 @@
  */
 @interface URLSession_Objective_C_QiitaAPIAccess : NSObject
 
-@property NSArray *array;
-- (void)urlAccess;
+@property NSArray *articleList;
+@property NSDictionary *obj;
+- (void)getArticle:(void (^)(NSArray<NSDictionary*> *articleList))completion;
 
 
 @end

@@ -8,7 +8,6 @@
 
 #import "URLSession_Objective_C_UITableVew.h"
 #import "URLSession_Objective_C_QiitaAPIAccess.h"
-#import "URLSession_Objective_C_Article.h"
 #import <Foundation/Foundation.h>
 
 
@@ -27,6 +26,8 @@
  */
 @implementation URLSession_Objective_C_UITableVew
     //URLアクセスクラスのインスタンスを生成
+//URLアクセスクラスのインスタンスを生成、allocはメモリの確保、initは初期化の意味
+URLSession_Objective_C_QiitaAPIAccess *urlSession_Objective_C_QiitaAPIAccess;
 
 
 
@@ -37,14 +38,12 @@
  @return セル
  */
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    Article *article = [[Article alloc] init];
-    // 追加するセルを取得する？？
+   urlSession_Objective_C_QiitaAPIAccess = [[URLSession_Objective_C_QiitaAPIAccess alloc] init];
+    // セルを取得する
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-//    }
+
     // セルのテキストを編集する
-   // cell.textLabel.text = [self.articleList objectAtIndex:indexPath.row];
-    cell.textLabel.text = article.title;
-    
+    cell.textLabel.text = [[self.articleList valueForKey:@"title"]objectAtIndex:indexPath.row];
     return cell;
     
 }
@@ -57,7 +56,7 @@
  @return テーブルの行数
  */
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.articleList.count;
 }
 
 
