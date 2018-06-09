@@ -8,6 +8,7 @@
 
 #import "URLSession_Objective_C_UIViewController.h"
 #import "URLSession_Objective_C_UITableVew.h"
+#import "URLSession_Objective_C_QiitaAPIAccess.h"
 #import <Foundation/Foundation.h>
 
 /**
@@ -31,6 +32,17 @@
 @implementation URLSession_Objective_C_UIViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // テーブルビューのデリゲード
+    self.tableView.dataSource = self.tableView;
+    self.tableView.delegate = self.tableView;
+    
+    // 〜〜リストをテーブルビューに設定する。
+    self.tableView.articleList = @[@"nepi",@"nepia",@"wwf",@"mintia",@"iPhone",@"note"];
+    
+    //URLアクセスクラスのインスタンスを生成、allocはメモリの確保、initは初期化の意味
+    URLSession_Objective_C_QiitaAPIAccess *urlSession_Objective_C_QiitaAPIAccess = [[URLSession_Objective_C_QiitaAPIAccess alloc] init];
+    [urlSession_Objective_C_QiitaAPIAccess urlAccess];
 }
 
 

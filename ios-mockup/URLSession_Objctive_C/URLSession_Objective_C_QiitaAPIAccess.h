@@ -6,6 +6,19 @@
 //  Copyright © 2018年 アルサーガパートナーズ株式会社. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+/**
+ インターフェイスの宣言
+ 外部アクセス可能なメンバ変数やメソッドを宣言する
+ */
+@interface URLSession_Objective_C_QiitaAPIAccess : NSObject
+
+@property NSArray *array;
+- (void)urlAccess;
+
+
+@end
+
 #ifndef URLSession_Objective_C_QiitaAPIAccess_h
 #define URLSession_Objective_C_QiitaAPIAccess_h
 

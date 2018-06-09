@@ -14,4 +14,7 @@
  */
 @interface URLSession_Objective_C_UITableVew: UITableView<UITableViewDelegate, UITableViewDataSource>
 
+    // テーブルビューの表示リスト
+    @property (strong, nonatomic) NSArray *articleList;
+
 @end

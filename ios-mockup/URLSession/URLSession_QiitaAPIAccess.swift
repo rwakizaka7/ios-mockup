@@ -31,9 +31,7 @@ class URLSession_QiitaAPIAccess {
         // URLコンポーネントクラスを作成する。
         var urlComponents = URLComponents(string: "https://qiita.com/api/v2/items")!
         // クエリ文字列をエンコードして追加する。
-        urlComponents.queryItems = [
-            URLQueryItem(name: "per_page", value: "50"),
-        ]
+        urlComponents.queryItems = [URLQueryItem(name: "per_page", value: "50")]
         
         // API完了処理をタスククラスに指定して、インスタンスを生成する。
         let task: URLSessionDataTask = URLSession.shared.dataTask(with: urlComponents.url!, completionHandler: { data, response, error in

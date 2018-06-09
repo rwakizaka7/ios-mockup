@@ -7,6 +7,8 @@
 //
 
 #import "URLSession_Objective_C_UITableVew.h"
+#import "URLSession_Objective_C_QiitaAPIAccess.h"
+#import "URLSession_Objective_C_Article.h"
 #import <Foundation/Foundation.h>
 
 
@@ -16,7 +18,6 @@
  */
 @interface URLSession_Objective_C_UITableVew ()
 
-//@property (strong, nonatomic) Article articleList[] = [];
 
 @end
 
@@ -25,15 +26,39 @@
  メソッドの処理を書く。
  */
 @implementation URLSession_Objective_C_UITableVew
+    //URLアクセスクラスのインスタンスを生成
 
 
-//- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-//    <#code#>
-//}
-//
-//- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    <#code#>
-//}
+
+/**
+ テーブルビューのセルを返す
+ @param tableView 対象のテーブルビュー
+ @param indexPath 対象の行
+ @return セル
+ */
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    Article *article = [[Article alloc] init];
+    // 追加するセルを取得する？？
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+//    }
+    // セルのテキストを編集する
+   // cell.textLabel.text = [self.articleList objectAtIndex:indexPath.row];
+    cell.textLabel.text = article.title;
+    
+    return cell;
+    
+}
+
+/**
+ テービュルビューの行数を返す。
+
+ @param tableView 対象のテーブルビュー
+ @param section 対象のセクション
+ @return テーブルの行数
+ */
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
 
 
 
