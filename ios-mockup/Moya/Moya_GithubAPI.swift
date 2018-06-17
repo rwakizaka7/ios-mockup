@@ -43,7 +43,7 @@ extension Moya_GithubAPI: TargetType {
         case .userProfile(let id):
             return "/users/\(id)"
         case .iosMockupProfile(let id):
-            return "/repos/\(id)/ios_mockup"
+            return "/repos/\(id)/ios-mockup"
         case .paramSample:
             return "/api"
         }
