@@ -20,50 +20,28 @@
 @end
 
 
-
 @implementation URLSession_Objective_C_QiitaAPIAccess
-NSString *html;
-NSString *title;
-NSString *user;
 
 
-
-/*
- 
-completionHandler:(void (^)(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error))completionHandler
- 
- 
- - (NSURLSessionUploadTask *)uploadTaskWithRequest:(NSURLRequest *)request fromFile:(NSURL *)fileURL completionHandler:(void (^)(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error))completionHandler;
- 
+ /**
+  キータAPIアクセス
+  @param completion 記事リスト取得時の処理
+  */
  - (void)getArticle:(void (^)(NSArray<NSDictionary*> *articleList))completion {
- 
- */
-
- - (void)getArticle:(void (^)(NSArray<NSDictionary*> *articleList))completion {
-    // URLコンポーネント
+    // URLコンポーネントクラスを作成し、ベースURLをエンコードする。
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:@"https://qiita.com/api/v2/items"];
+    // クエリの文字列をエンコードし、追加する。
     urlComponents.queryItems = @[[NSURLQueryItem queryItemWithName:@"per_page" value:@"50"]];
-    
+    // URLリクエストクラスを作成し、リクエストURLを生成する。
     NSURLRequest *request = [NSURLRequest requestWithURL:urlComponents.URL];
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:
-                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
-                                     html = [[NSString alloc] initWithBytes:data.bytes length:data.length encoding:NSUTF8StringEncoding];
-        
-                                      // JSON型を辞書型の配列に変換する。
-                                      NSData *jsonData = [html dataUsingEncoding:NSUnicodeStringEncoding];
-                                      self.articleList = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
-                                      
-                                      completion(self.articleList);
-                                    
-                                      
+    // APIを開始し、完了後にcompletionHandlerの処理が実行される。
+     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *jsonData, NSURLResponse *response, NSError *error) {
+        // 取得したJSONデータを辞書型に変換し、記事リストへ格納する。
+         self.articleList = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
+         // completionに記事リストが返る。
+         completion(self.articleList);
                                   }];
-    
     [task resume];
-    
-   
-
-    
 }
 
 

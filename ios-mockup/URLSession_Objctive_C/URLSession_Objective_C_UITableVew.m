@@ -17,7 +17,6 @@
  */
 @interface URLSession_Objective_C_UITableVew ()
 
-
 @end
 
 /**
@@ -50,7 +49,6 @@ URLSession_Objective_C_QiitaAPIAccess *urlSession_Objective_C_QiitaAPIAccess;
 
 /**
  テービュルビューの行数を返す。
-
  @param tableView 対象のテーブルビュー
  @param section 対象のセクション
  @return テーブルの行数
@@ -58,7 +56,5 @@ URLSession_Objective_C_QiitaAPIAccess *urlSession_Objective_C_QiitaAPIAccess;
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.articleList.count;
 }
-
-
 
 @end

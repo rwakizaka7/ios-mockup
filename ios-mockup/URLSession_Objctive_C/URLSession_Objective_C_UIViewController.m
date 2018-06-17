@@ -36,40 +36,24 @@
     // テーブルビューのデリゲード
     self.tableView.dataSource = self.tableView;
     self.tableView.delegate = self.tableView;
-    
    
-    // ブロック型変数の定義
-    void (^completion)(NSArray<NSDictionary*> *articleList);
-    // ブロック型変数に処理の入れ方（リテラル）
-    completion = ^(NSArray<NSDictionary*> *articleList) { /* 本体 */ };
+//    // ブロック型変数の定義
+//    void (^completion)(NSArray<NSDictionary*> *articleList);
+//    // ブロック型変数に処理の入れ方（リテラル）
+//    completion = ^(NSArray<NSDictionary*> *articleList) { /* 本体 */ };
     
-    //URLアクセスクラスのインスタンスを生成、allocはメモリの確保、initは初期化の意味
+    // URLアクセスクラスのインスタンスを生成。
     URLSession_Objective_C_QiitaAPIAccess *urlSession_Objective_C_QiitaAPIAccess = [[URLSession_Objective_C_QiitaAPIAccess alloc] init];
+    // 記事取得完了後の処理を{}に格納する。
     [urlSession_Objective_C_QiitaAPIAccess getArticle:^(NSArray<NSDictionary *> *articleList) {
-
-        
+        // キータ記事リストをテーブルビューに設定する。
         self.tableView.articleList = articleList;
-        
-        
+        // メインスレッド発生時の処理を行う。
         dispatch_async(dispatch_get_main_queue(), ^{
-            
+            //  テーブルビューの更新を行う。
             [self.tableView reloadData];
         });
     }];
-    
-//    //URLアクセスクラスのインスタンスを生成、allocはメモリの確保、initは初期化の意味
-//    URLSession_Objective_C_QiitaAPIAccess *urlSession_Objective_C_QiitaAPIAccess = [[URLSession_Objective_C_QiitaAPIAccess alloc] init];
-//    [urlSession_Objective_C_QiitaAPIAccess getArticle:^(NSArray<NSDictionary *> *articleList) {
-//
-//    }
-    
-     
-    
-   // [self performSelector:@selector(tableviewreload) withObject:nil afterDelay:5.0];
 }
-
-//- (void)tableviewreload {
-//    [self.tableView reloadData];
-//}
 
 @end
